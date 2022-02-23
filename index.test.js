@@ -76,29 +76,31 @@ describe('[Exercise 5] Seasons', () => {
     expect(season).toBe('summer');
   });
   test('[10] the SECOND call of seasons.next returns "fall"', () => {
-    let season = seasons.next();
-    season = seasons.next();
+    let season = "";
+    for(let i = 0; i < 2; i++){
+      season = seasons.next();
+    }
     expect(season).toBe('fall');
   });
   test('[11] the THIRD call of seasons.next returns "winter"', () => {
-    let season = seasons.next();
-    season = seasons.next();
-    season = seasons.next();
+    let season = "";
+    for(let i = 0; i < 3; i++){
+      season = seasons.next();
+    }
     expect(season).toBe('winter');
   });
   test('[12] the FOURTH call of seasons.next returns "spring"', () => {
-    let season = seasons.next();
-    season = seasons.next();
-    season = seasons.next();
-    season = seasons.next();
+    let season = "";
+    for(let i = 0; i < 4; i++){
+      season = seasons.next();
+    }
     expect(season).toBe('spring');
   });
   test('[13] the FIFTH call of seasons.next returns again "summer"', () => {
-    let season = seasons.next();
-    season = seasons.next();
-    season = seasons.next();
-    season = seasons.next();
-    season = seasons.next();
+    let season = "";
+    for(let i = 0; i < 5; i++){
+      season = seasons.next();
+    }
     expect(season).toBe('summer');
   });
   test('[14] the 40th call of seasons.next returns "spring"', () => {
