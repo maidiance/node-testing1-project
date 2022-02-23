@@ -7,18 +7,30 @@ describe('[Exercise 1] trimProperties', () => {
     const expected = { foo: 'foo', bar: 'bar', baz: 'baz' }
     const actual = utils.trimProperties(input)
     expect(actual).toEqual(expected)
-  })
+  });
   test('[2] returns a copy, leaving the original object intact', () => {
     const input = { foo: '  foo ', bar: 'bar ', baz: ' baz' };
     const copy = { foo: '  foo ', bar: 'bar ', baz: ' baz' };
-    utils.trimProperties(input);
+    const result = utils.trimProperties(input);
     expect(input).toEqual(copy);
+    expect(result).not.toEqual(input);
   });
 });
 
 describe('[Exercise 2] trimPropertiesMutation', () => {
-  // test('[3] returns an object with the properties trimmed', () => {})
-  // test('[4] the object returned is the exact same one we passed in', () => {})
+  test('[3] returns an object with the properties trimmed', () => {
+    const input = { foo: '  foo ', bar: 'bar ', baz: ' baz' };
+    const expected = { foo: 'foo', bar: 'bar', baz: 'baz' };
+    const result = utils.trimPropertiesMutation(input);
+    expect(result).toEqual(expected);
+  });
+  test('[4] the object returned is the exact same one we passed in', () => {
+    const input = { foo: '  foo ', bar: 'bar ', baz: ' baz' };
+    const copy = { foo: '  foo ', bar: 'bar ', baz: ' baz' };
+    const result = utils.trimPropertiesMutation(input);
+    expect(input).not.toEqual(copy);
+    expect(result).toBe(input);
+  });
 });
 
 describe('[Exercise 3] findLargestInteger', () => {

@@ -26,7 +26,7 @@ function trimProperties(obj) {
 function trimPropertiesMutation(obj) {
   // ✨ implement
   for(let property in obj) {
-    obj.property = property.trim();
+    obj[property] = property.trim();
   }
   return obj;
 }
@@ -42,13 +42,13 @@ function trimPropertiesMutation(obj) {
 function findLargestInteger(integers) {
   // ✨ implement
   let arr = [];
-  integers.forEach(() => {
+  integers.forEach((obj) => {
     arr.push(obj.integer);
   });
   let largest = 0;
   arr.forEach((num) => {
-    if (largest < element) {
-      largest = element;
+    if (largest < num) {
+      largest = num;
     }
   });
   return largest;
