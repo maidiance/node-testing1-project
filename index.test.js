@@ -51,8 +51,10 @@ describe('[Exercise 4] Counter', () => {
     expect(count).toBe(3);
   });
   test('[7] the SECOND CALL of counter.countDown returns the initial count minus one', () => {
-    let count = counter.countDown();
-    count = counter.countDown();
+    let count;
+    for(let i = 0; i < 2; i++) {
+      count = counter.countDown();
+    }
     expect(count).toBe(2);
   });
   test('[8] the count eventually reaches zero but does not go below zero', () => {
@@ -121,7 +123,9 @@ describe('[Exercise 6] Car', () => {
     let odometer = focus.drive(100);
     expect(odometer).toBe(100);
   });
-  // test('[16] driving the car uses gas', () => {})
+  test('[16] driving the car uses gas', () => {
+
+  });
   // test('[17] refueling allows to keep driving', () => {})
   // test('[18] adding fuel to a full tank has no effect', () => {})
 });
