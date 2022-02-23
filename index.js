@@ -166,9 +166,10 @@ class Car {
         return this.odometer;
       } else {
         this.odometer++;
-        this.fuel - 1/this.mpg;
+        this.fuel -= 1/this.mpg;
       }
     }
+    console.log(this.fuel);
     return this.odometer;
   }
 
