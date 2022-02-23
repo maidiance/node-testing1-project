@@ -8,6 +8,11 @@
  */
 function trimProperties(obj) {
   // ✨ implement
+  let result = {};
+  for(let property in obj) {
+    result[property] = property.trim();
+  }
+  return result;
 }
 
 /**
@@ -20,6 +25,10 @@ function trimProperties(obj) {
  */
 function trimPropertiesMutation(obj) {
   // ✨ implement
+  for(let property in obj) {
+    obj.property = property.trim();
+  }
+  return obj;
 }
 
 /**
@@ -32,6 +41,17 @@ function trimPropertiesMutation(obj) {
  */
 function findLargestInteger(integers) {
   // ✨ implement
+  let arr = [];
+  integers.forEach(() => {
+    arr.push(obj.integer);
+  });
+  let largest = 0;
+  arr.forEach((num) => {
+    if (largest < element) {
+      largest = element;
+    }
+  });
+  return largest;
 }
 
 class Counter {
