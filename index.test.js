@@ -56,10 +56,10 @@ describe('[Exercise 4] Counter', () => {
     expect(count).toBe(2);
   });
   test('[8] the count eventually reaches zero but does not go below zero', () => {
-    let count = counter.countDown();
-    count = counter.countDown();
-    count = counter.countDown();
-    count = counter.countDown();
+    let count;
+    for(let i = 0; i < 4; i++) {
+      count = counter.countDown();
+    }
     expect(count).toBe(0);
     count = counter.countDown();
     expect(count).toBe(0);
